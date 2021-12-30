@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Score(props) {
+export default function Scoreboard(props) {
   const style = {
     margin: "auto",
     width: "50%",
@@ -10,5 +10,11 @@ export default function Score(props) {
     "font-family": "Georgia, serif",
     "text-align": "center",
   };
-  return <div style={style}>Score : {props.score}</div>;
+  return (
+    <div style={style}>
+      <div>{props.seconds}</div>
+      <div>{props.score}</div>
+      <div>HI-Score : {props.highscore}</div>
+    </div>
+  );
 }
