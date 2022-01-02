@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Cell from "./cell";
 import Scoreboard from "./scoreboard";
+import useTimer from "../hooks/userTimer";
 
 export default function Game() {
   const [grid, setGrid] = useState([]);
   const [targetCells, setTargetCells] = useState([]);
   const [score, setScore] = useState(0);
   const [highscore, setHighscore] = useState(0);
-  const [seconds, setSeconds] = useState(30);
+  const seconds = useTimer();
 
   const style = {
     margin: "auto",
@@ -24,11 +25,6 @@ export default function Game() {
     const targetCells = [1, 8, 9];
     setGrid(grid);
     setTargetCells(targetCells);
-    // if (seconds > 0) {
-    //   setTimeout(() => setSeconds(seconds - 1), 1000);
-    // } else {
-    //   setSeconds("Time Over");
-    // }
   }, []);
 
   const updateCell = (i, e) => {
