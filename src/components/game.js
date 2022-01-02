@@ -42,6 +42,8 @@ export default function Game() {
         if (score > highscore) setHighscore(score);
         setScore(0);
       }
+    } else {
+      if (score > highscore) setHighscore(score);
     }
   };
 
