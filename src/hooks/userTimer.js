@@ -6,7 +6,7 @@ const useTimer = () => {
     if (seconds > 0) {
       setTimeout(() => setSeconds(seconds - 1), 1000);
     } else {
-      setSeconds("BOOOOM!");
+      setSeconds("Over");
     }
   });
   return seconds;

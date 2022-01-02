@@ -3,18 +3,30 @@ import React from "react";
 export default function Scoreboard(props) {
   const style = {
     margin: "auto",
-    width: "50%",
+    width: "100%",
     border: "3px solid black",
-    padding: "10px",
     "font-size": "xx-large",
     "font-family": "Georgia, serif",
     "text-align": "center",
   };
+
+  const timer = {
+    float: "center",
+  };
+
+  const score = {
+    float: "left",
+  };
+
+  const highscore = {
+    float: "right",
+  };
+
   return (
     <div style={style}>
-      <div>{props.seconds}</div>
-      <div>{props.score}</div>
-      <div>HI-Score : {props.highscore}</div>
+      <div style={timer}>Time : {props.seconds}</div>
+      <div style={score}>Score : {props.score}</div>
+      <div style={highscore}>Hi-Score : {props.highscore}</div>
     </div>
   );
 }
